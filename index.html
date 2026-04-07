@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AGIM V2.0 实时扫描 2026-04-07</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0e1a;color:#e8eaf0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;padding:24px}
+.header{text-align:center;margin-bottom:24px;padding:20px;background:linear-gradient(135deg,#1a2044,#0d1129);border-radius:16px;border:1px solid #2a3a6a}
+.header h1{font-size:22px;color:#7eb8ff;margin-bottom:6px}
+.header p{color:#6b7fa8;font-size:13px}
+.badge{padding:4px 14px;border-radius:20px;font-size:12px;font-weight:600;display:inline-block}
+.b-green{background:#0d3d2d;color:#3dff9a}.b-red{background:#3d0d1d;color:#ff4d6a}
+.b-yellow{background:#3d2d0d;color:#ffc43d}.b-gray{background:#1e2a45;color:#7eb8ff}
+.up{color:#ff4d6a}.dn{color:#3dff9a}.neu{color:#ffc43d}
+.market-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-bottom:20px}
+.mcard{background:#131929;border-radius:12px;padding:14px;text-align:center;border:1px solid #1e2a45}
+.mcard .val{font-size:26px;font-weight:700}
+.mcard .lbl{color:#6b7fa8;font-size:12px;margin-top:4px}
+.section{background:#131929;border-radius:12px;padding:16px;margin-bottom:14px;border:1px solid #1e2a45}
+.section h2{font-size:14px;color:#7eb8ff;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid #1e2a45}
+.stock-card{background:#0d1129;border-radius:10px;padding:13px;margin-bottom:9px;border-left:3px solid #ffc43d}
+.stock-name{font-size:14px;font-weight:700;margin-bottom:2px}
+.stock-ticker{color:#5a6a8a;font-size:11px;margin-bottom:8px}
+.sg{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:8px}
+.si{background:#0a0e1a;border-radius:5px;padding:6px;text-align:center}
+.si .k{color:#5a6a8a;font-size:10px}.si .v{font-size:13px;font-weight:700;margin-top:1px}
+.verdict{background:#0d1129;border-radius:10px;padding:14px;border:1px solid #2a3a6a;display:flex;align-items:center;gap:14px}
+.vi{font-size:30px}.vt{flex:1}.vtit{font-size:15px;font-weight:700;margin-bottom:4px}
+.vdesc{font-size:12px;color:#6b7fa8}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{color:#5a6a8a;text-align:left;padding:5px 8px;border-bottom:1px solid #1e2a45;font-weight:400}
+td{padding:6px 8px;border-bottom:1px solid #131929}
+.up-td{color:#ff4d6a}.dn-td{color:#3dff9a}
+.footer{text-align:center;color:#3a4a6a;font-size:11px;margin-top:18px}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>📊 AGIM V2.0 实时扫描</h1>
+  <p>🕐 2026-04-07 11:03 UTC &nbsp;|&nbsp; 数据：腾讯证券实时行情</p>
+  <div style="margin-top:12px">
+    <span class="badge b-green">▲ 涨停 93家</span>
+    <span class="badge b-red">▼ 跌停 0家</span>
+    <span class="badge b-gray">北向 暂缺</span>
+  </div>
+</div>
+
+<div class="market-grid">
+  <div class="mcard"><div class="val up">▲1.37%</div><div class="lbl">贵州茅台 1440.02</div></div>
+  <div class="mcard"><div class="val up">▲0.37%</div><div class="lbl">五粮液 103.11</div></div>
+  <div class="mcard"><div class="val up">▲0.48%</div><div class="lbl">宁德时代 384.59</div></div>
+  <div class="mcard"><div class="val dn">▼1.76%</div><div class="lbl">海光信息 217.54</div></div>
+  <div class="mcard"><div class="val up">▲0.84%</div><div class="lbl">立讯精密 48.39</div></div>
+</div>
+
+<div class="section">
+  <h2>📈 实时行情一览</h2>
+  <table>
+    <tr><th>代码</th><th>名称</th><th>最新价</th><th>今高</th><th>今低</th><th>涨跌幅</th></tr>
+    <tr>
+      <td>sh600519</td><td>贵州茅台</td><td>1440.02</td><td>1470.00</td><td>1435.05</td><td class="up-td">▲1.37%</td>
+    </tr>
+    <tr>
+      <td>sz000858</td><td>五粮液</td><td>103.11</td><td>103.90</td><td>102.35</td><td class="up-td">▲0.37%</td>
+    </tr>
+    <tr>
+      <td>sz300750</td><td>宁德时代</td><td>384.59</td><td>393.20</td><td>381.49</td><td class="up-td">▲0.48%</td>
+    </tr>
+    <tr>
+      <td>sh688041</td><td>寒武纪</td><td>217.54</td><td>223.85</td><td>211.00</td><td class="dn-td">▼1.76%</td>
+    </tr>
+    <tr>
+      <td>sz002475</td><td>立讯精密</td><td>48.39</td><td>49.95</td><td>48.11</td><td class="up-td">▲0.84%</td>
+    </tr>
+  </table>
+</div>
+
+<div class="section">
+  <h2>📡 AGIM个股交易信号</h2>
+
+  <div class="stock-card">
+    <div class="stock-name">贵州茅台 <span class="badge b-red" style="font-size:10px">▼1.37%</span></div>
+    <div class="stock-ticker">sh600519</div>
+    <div class="sg">
+      <div class="si"><div class="k">信号</div><div class="v" style="color:#ffc43d">观望</div></div>
+      <div class="si"><div class="k">置信度</div><div class="v">55%</div></div>
+      <div class="si"><div class="k">止损价</div><div class="v" style="color:#ff4d6a">1368.02</div></div>
+      <div class="si"><div class="k">止盈价</div><div class="v" style="color:#3dff9a">1656.02</div></div>
+    </div>
+    <div class="sg">
+      <div class="si"><div class="k">基本面</div><div class="v">80</div></div>
+      <div class="si"><div class="k">技术面</div><div class="v">65</div></div>
+      <div class="si"><div class="k">情绪面</div><div class="v">76</div></div>
+      <div class="si"><div class="k">事件面</div><div class="v">72</div></div>
+    </div>
+  </div>
+
+  <div class="stock-card">
+    <div class="stock-name">宁德时代 <span class="badge b-green" style="font-size:10px">▲0.48%</span></div>
+    <div class="stock-ticker">sz300750</div>
+    <div class="sg">
+      <div class="si"><div class="k">信号</div><div class="v" style="color:#ffc43d">观望</div></div>
+      <div class="si"><div class="k">置信度</div><div class="v">54%</div></div>
+      <div class="si"><div class="k">止损价</div><div class="v" style="color:#ff4d6a">361.51</div></div>
+      <div class="si"><div class="k">止盈价</div><div class="v" style="color:#3dff9a">453.82</div></div>
+    </div>
+    <div class="sg">
+      <div class="si"><div class="k">基本面</div><div class="v">80</div></div>
+      <div class="si"><div class="k">技术面</div><div class="v">75</div></div>
+      <div class="si"><div class="k">情绪面</div><div class="v">81</div></div>
+      <div class="si"><div class="k">事件面</div><div class="v">72</div></div>
+    </div>
+  </div>
+
+  <div class="stock-card">
+    <div class="stock-name">五粮液 <span class="badge b-green" style="font-size:10px">▲0.37%</span></div>
+    <div class="stock-ticker">sz000858</div>
+    <div class="sg">
+      <div class="si"><div class="k">信号</div><div class="v" style="color:#ffc43d">观望</div></div>
+      <div class="si"><div class="k">置信度</div><div class="v">46%</div></div>
+      <div class="si"><div class="k">止损价</div><div class="v" style="color:#ff4d6a">97.95</div></div>
+      <div class="si"><div class="k">止盈价</div><div class="v" style="color:#3dff9a">121.67</div></div>
+    </div>
+    <div class="sg">
+      <div class="si"><div class="k">基本面</div><div class="v">80</div></div>
+      <div class="si"><div class="k">技术面</div><div class="v">65</div></div>
+      <div class="si"><div class="k">情绪面</div><div class="v">71</div></div>
+      <div class="si"><div class="k">事件面</div><div class="v">72</div></div>
+    </div>
+  </div>
+
+  <div class="stock-card">
+    <div class="stock-name">寒武纪 <span class="badge b-red" style="font-size:10px">▼1.76%</span></div>
+    <div class="stock-ticker">sh688041</div>
+    <div class="sg">
+      <div class="si"><div class="k">信号</div><div class="v" style="color:#ffc43d">观望</div></div>
+      <div class="si"><div class="k">置信度</div><div class="v">47%</div></div>
+      <div class="si"><div class="k">止损价</div><div class="v" style="color:#ff4d6a">206.66</div></div>
+      <div class="si"><div class="k">止盈价</div><div class="v" style="color:#3dff9a">256.70</div></div>
+    </div>
+    <div class="sg">
+      <div class="si"><div class="k">基本面</div><div class="v">80</div></div>
+      <div class="si"><div class="k">技术面</div><div class="v">65</div></div>
+      <div class="si"><div class="k">情绪面</div><div class="v">65</div></div>
+      <div class="si"><div class="k">事件面</div><div class="v">72</div></div>
+    </div>
+  </div>
+
+  <div class="stock-card">
+    <div class="stock-name">立讯精密 <span class="badge b-green" style="font-size:10px">▲0.84%</span></div>
+    <div class="stock-ticker">sz002475</div>
+    <div class="sg">
+      <div class="si"><div class="k">信号</div><div class="v" style="color:#ffc43d">观望</div></div>
+      <div class="si"><div class="k">置信度</div><div class="v">40%</div></div>
+      <div class="si"><div class="k">止损价</div><div class="v" style="color:#ff4d6a">45.91</div></div>
+      <div class="si"><div class="k">止盈价</div><div class="v" style="color:#3dff9a">57.10</div></div>
+    </div>
+    <div class="sg">
+      <div class="si"><div class="k">基本面</div><div class="v">80</div></div>
+      <div class="si"><div class="k">技术面</div><div class="v">65</div></div>
+      <div class="si"><div class="k">情绪面</div><div class="v">72</div></div>
+      <div class="si"><div class="k">事件面</div><div class="v">72</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>🔥 涨停池 TOP10（今日）</h2>
+  <table>
+    <tr><th>#</th><th>代码</th><th>名称</th><th>连板</th><th>换手率</th><th>封板资金</th><th>行业</th></tr>
+    <tr><td>1</td><td>000586</td><td>汇源通信</td><td>3板</td><td>0.94%</td><td>3.54亿</td><td>通信设备</td></tr>
+    <tr><td>2</td><td>603327</td><td>福蓉科技</td><td>1板</td><td>0.57%</td><td>0.91亿</td><td>消费电子</td></tr>
+    <tr><td>3</td><td>000890</td><td>法尔胜</td><td>1板</td><td>11.26%</td><td>1.70亿</td><td>环保设备</td></tr>
+  </table>
+  <p style="color:#5a6a8a;font-size:12px;margin-top:8px">共 93 只涨停 | 数据来源: akshare东方财富</p>
+</div>
+
+<div class="verdict">
+  <div class="vi">⏸️</div>
+  <div class="vt">
+    <div class="vtit">CDO首席决策官：整体建议观望</div>
+    <div class="vdesc">茅台-1.37%带消费下跌，宁德时代小涨属正常波动 | 涨停93家显示局部做多情绪 | 注意保护止损，仓位控制在40%以下 | 等待更明确的方向信号</div>
+  </div>
+</div>
+
+<div class="footer">AGIM V2.0 | ⚠️ 仅供参考，不构成投资建议 | 数据来源：腾讯证券+东方财富</div>
+</body>
+</html>

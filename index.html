@@ -2,177 +2,120 @@
 <html lang="zh">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>自选股实时行情 2026-04-07</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AGIM 全球资讯+行情 2026-04-07</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#0a0e1a;color:#e8eaf0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;padding:24px}
-.header{text-align:center;margin-bottom:24px;padding:20px;background:linear-gradient(135deg,#1a2044,#0d1129);border-radius:16px;border:1px solid #2a3a6a}
-.header h1{font-size:22px;color:#7eb8ff;margin-bottom:6px}
-.header p{color:#6b7fa8;font-size:13px}
-.badge{padding:3px 12px;border-radius:20px;font-size:12px;font-weight:600;display:inline-block}
-.b-green{background:#0d3d2d;color:#3dff9a}.b-red{background:#3d0d1d;color:#ff4d6a}
-.b-yellow{background:#3d2d0d;color:#ffc43d}.b-gray{background:#1e2a45;color:#7eb8ff}
+body{background:#0a0e1a;color:#e8eaf0;font-family:"PingFang SC","Microsoft YaHei",sans-serif;padding:20px}
+.header{text-align:center;margin-bottom:20px;padding:18px;background:linear-gradient(135deg,#1a2044,#0d1129);border-radius:14px;border:1px solid #2a3a6a}
+.header h1{font-size:20px;color:#7eb8ff;margin-bottom:4px}
+.header p{color:#6b7fa8;font-size:12px}
+.badge{padding:3px 12px;border-radius:20px;font-size:11px;font-weight:600;display:inline-block}
+.b-red{background:#3d0d1d;color:#ff4d6a}.b-green{background:#0d3d2d;color:#3dff9a}.b-yellow{background:#3d2d0d;color:#ffc43d}.b-orange{background:#3d2a0d;color:#ff9f43}
 .up{color:#ff4d6a}.dn{color:#3dff9a}
-.section{background:#131929;border-radius:12px;padding:16px;margin-bottom:14px;border:1px solid #1e2a45}
-.section h2{font-size:14px;color:#7eb8ff;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid #1e2a45}
-.stock-card{background:#0d1129;border-radius:10px;padding:13px;margin-bottom:9px;border-left:3px solid #ffc43d}
-.sg{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:8px}
-.si{background:#0a0e1a;border-radius:5px;padding:6px;text-align:center}
-.si .k{color:#5a6a8a;font-size:10px}.si .v{font-size:13px;font-weight:700;margin-top:1px}
-.sname{font-size:14px;font-weight:700;margin-bottom:2px}
-.notes{font-size:11px;color:#4a5a7a;margin-top:6px;line-height:1.4}
-.verdict{background:#0d1129;border-radius:10px;padding:14px;border:1px solid #2a3a6a;display:flex;align-items:center;gap:14px}
-.vi{font-size:30px}.vt{flex:1}.vtit{font-size:15px;font-weight:700;margin-bottom:4px}.vdesc{font-size:12px;color:#6b7fa8}
-.footer{text-align:center;color:#3a4a6a;font-size:11px;margin-top:18px}
-table{width:100%;border-collapse:collapse;font-size:13px}
-th{color:#5a6a8a;text-align:left;padding:5px 8px;border-bottom:1px solid #1e2a45;font-weight:400}
-td{padding:6px 8px;border-bottom:1px solid #131929}
-.up-td{color:#ff4d6a}.dn-td{color:#3dff9a}
+.section{background:#131929;border-radius:12px;padding:14px;margin-bottom:12px;border:1px solid #1e2a45}
+.section h2{font-size:13px;color:#7eb8ff;margin-bottom:10px;padding-bottom:7px;border-bottom:1px solid #1e2a45}
+.alert{margin-bottom:10px;padding:12px;border-radius:8px;border-left:4px solid #ff4d6a;background:#1a0d0d}
+table{width:100%;border-collapse:collapse;font-size:12px}
+th{color:#5a6a8a;text-align:left;padding:4px 8px;border-bottom:1px solid #1e2a45;font-weight:400}
+td{padding:5px 8px;border-bottom:1px solid #131929}
+.sector-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+.sector{background:#0a0e1a;border-radius:6px;padding:8px;font-size:12px}
+.sector .name{font-weight:700;margin-bottom:3px}
+.sector .pos{color:#3dff9a}.sector .neg{color:#ff4d6a}
+.rating-table{font-size:12px}
+.rating-table td{padding:4px 8px}
+.high{color:#ff4d6a}.medium{color:#ffc43d}.low{color:#3dff9a}
+.footer{text-align:center;color:#3a4a6a;font-size:10px;margin-top:16px}
 </style>
 </head>
 <body>
 
 <div class="header">
-  <h1>📊 自选股实时行情</h1>
-  <p>🕐 2026-04-07 11:27 UTC &nbsp;|&nbsp; 数据：腾讯证券实时行情</p>
+  <h1>🌍 AGIM 全球资讯+实时行情</h1>
+  <p>2026-04-07 12:41 UTC | 数据：路透社/彭博/Al Jazeera + 腾讯证券</p>
+  <div style="margin-top:10px">
+    <span class="badge b-red">🔴 霍尔木兹危机</span>
+    <span class="badge b-yellow">FOMC 4/28</span>
+    <span class="badge b-orange">加息概率52%</span>
+  </div>
 </div>
 
 <div class="section">
-  <h2>📈 自选股报价（2026-04-07）</h2>
+  <h2>🔴 最高优先级：霍尔木兹危机（★★★★★极高风险）</h2>
+  <div class="alert">
+    <div style="font-weight:700;margin-bottom:6px">⚠️ 历史级黑天鹅：特朗普最后通牒 → 伊朗拒绝 → 发射超高音速导弹 → 美军最高戒备</div>
+    <div style="font-size:12px;color:#aaa;line-height:1.7">
+      <b>事件：</b>伊朗封锁霍尔木兹海峡（全球20%石油咽喉）→ 特朗普4月7日最后通牒 → 伊朗拒绝并发射超高音速导弹<br>
+      <b>市场影响：</b>布伦特原油盘中暴涨3%+，全球避险资金涌入黄金/美债<br>
+      <b>升级概率：</b>★★★★★（极高）
+    </div>
+  </div>
   <table>
-    <tr><th>股票</th><th>代码</th><th>最新价</th><th>昨收</th><th>涨跌幅</th><th>信号</th></tr>
-
-    <tr>
-      <td><b>万华化学</b></td><td>600309</td>
-      <td class="up">86.27</td><td>82.38</td>
-      <td class="up">▲4.72%</td>
-      <td><span class="badge b-green">强势</span></td>
-    </tr>
-
-    <tr>
-      <td><b>中芯国际</b></td><td>688981</td>
-      <td class="up">95.62</td><td>91.78</td>
-      <td class="up">▲4.18%</td>
-      <td><span class="badge b-green">强势</span></td>
-    </tr>
-
-    <tr>
-      <td><b>比亚迪</b></td><td>002594</td>
-      <td class="dn">97.98</td><td>99.01</td>
-      <td class="dn">▼1.04%</td>
-      <td><span class="badge b-red">偏弱</span></td>
-    </tr>
-
-    <tr>
-      <td><b>宁德时代</b></td><td>300750</td>
-      <td class="dn">384.59</td><td>386.46</td>
-      <td class="dn">▼0.48%</td>
-      <td><span class="badge b-yellow">中性</span></td>
-    </tr>
-
-    <tr>
-      <td><b>山东黄金</b></td><td>600547</td>
-      <td class="dn">39.70</td><td>40.19</td>
-      <td class="dn">▼1.22%</td>
-      <td><span class="badge b-red">偏弱</span></td>
-    </tr>
-
-    <tr>
-      <td><b>禾赛科技</b></td><td>HSAI.US</td>
-      <td>20.71</td><td>20.63</td>
-      <td class="up">▲0.39%</td>
-      <td><span class="badge b-yellow">美股</span></td>
-    </tr>
-
+    <tr><th>时间</th><th>事件</th></tr>
+    <tr><td>4月6日</td><td>特朗普威胁摧毁伊朗基础设施，设定最后通牒</td></tr>
+    <tr><td>4月7日</td><td>伊朗拒绝美方提议，发射超高音速导弹</td></tr>
+    <tr><td>4月7日</td><td>美军进入最高戒备状态</td></tr>
   </table>
-  <p style="color:#3a4a6a;font-size:11px;margin-top:8px">⚠️ 北方华创(002371) 行情获取失败，请稍后刷新</p>
 </div>
 
 <div class="section">
-  <h2>📋 持仓快照与AGIM评分</h2>
-
-  <div class="stock-card">
-    <div class="sname">万华化学 <span class="badge b-green" style="font-size:10px">▲4.72%</span></div>
-    <div class="sg">
-      <div class="si"><div class="k">AGIM评分</div><div class="v">75</div></div>
-      <div class="si"><div class="k">持仓成本</div><div class="v">-</div></div>
-      <div class="si"><div class="k">持仓状态</div><div class="v">观望</div></div>
-      <div class="si"><div class="k">来源</div><div class="v">AGIM</div></div>
-    </div>
-    <div class="notes">化工龙头，MDI景气度 | 今日大幅上涨4.72%，突破近期整理区间，关注量能配合</div>
-  </div>
-
-  <div class="stock-card">
-    <div class="sname">中芯国际 <span class="badge b-green" style="font-size:10px">▲4.18%</span></div>
-    <div class="sg">
-      <div class="si"><div class="k">AGIM评分</div><div class="v">82</div></div>
-      <div class="si"><div class="k">持仓成本</div><div class="v">~97元</div></div>
-      <div class="si"><div class="k">目标价</div><div class="v">118-192元</div></div>
-      <div class="si"><div class="k">来源</div><div class="v">AGIM</div></div>
-    </div>
-    <div class="notes">半导体国产替代+科创板一季报催化 | 今日大涨4.18%，当前95.62元，低于建仓成本，可逢低加仓</div>
-  </div>
-
-  <div class="stock-card">
-    <div class="sname">比亚迪 <span class="badge b-red" style="font-size:10px">▼1.04%</span></div>
-    <div class="sg">
-      <div class="si"><div class="k">AGIM评分</div><div class="v">79</div></div>
-      <div class="si"><div class="k">建仓区间</div><div class="v">450元</div></div>
-      <div class="si"><div class="k">事件</div><div class="v">北京车展</div></div>
-      <div class="si"><div class="k">来源</div><div class="v">AGIM</div></div>
-    </div>
-    <div class="notes">北京车展(4/6) 事件已兑现 | 今日小幅回落1.04%，距建仓目标价较远，轻仓等待</div>
-  </div>
-
-  <div class="stock-card">
-    <div class="sname">宁德时代 <span class="badge b-yellow" style="font-size:10px">▼0.48%</span></div>
-    <div class="sg">
-      <div class="si"><div class="k">AGIM评分</div><div class="v">77</div></div>
-      <div class="si"><div class="k">建仓区间</div><div class="v">265元</div></div>
-      <div class="si"><div class="k">事件</div><div class="v">北京车展</div></div>
-      <div class="si"><div class="k">来源</div><div class="v">AGIM</div></div>
-    </div>
-    <div class="notes">全球动力电池龙头 | 北京车展事件已过，股价正常调整，轻仓观望</div>
-  </div>
-
-  <div class="stock-card">
-    <div class="sname">山东黄金 <span class="badge b-red" style="font-size:10px">▼1.22%</span></div>
-    <div class="sg">
-      <div class="si"><div class="k">AGIM评分</div><div class="v">76</div></div>
-      <div class="si"><div class="k">持仓成本</div><div class="v">44元</div></div>
-      <div class="si"><div class="k">目标价</div><div class="v">52元</div></div>
-      <div class="si"><div class="k">来源</div><div class="v">AGIM</div></div>
-    </div>
-    <div class="notes">黄金价格创历史新高 | 兑现期，股价小幅回落至39.70元，注意止损保护（7%止损线）</div>
-  </div>
-
-  <div class="stock-card">
-    <div class="sname">禾赛科技 <span class="badge b-yellow" style="font-size:10px">▲0.39%</span></div>
-    <div class="sg">
-      <div class="si"><div class="k">AGIM评分</div><div class="v">76</div></div>
-      <div class="si"><div class="k">最新价</div><div class="v">$20.71</div></div>
-      <div class="si"><div class="k">ADR</div><div class="v">美股</div></div>
-      <div class="si"><div class="k">来源</div><div class="v">AGIM</div></div>
-    </div>
-    <div class="notes">L3自动驾驶元年+激光雷达龙头 | 全球车载激光雷达市占率~40%，L3政策直接受益 | 美股开盘中</div>
-  </div>
-
-</div>
-
-<div class="verdict">
-  <div class="vi">📋</div>
-  <div class="vt">
-    <div class="vtit">自选股今日小结</div>
-    <div class="vdesc">
-      强势：万华化学(+4.72%)、中芯国际(+4.18%) 领涨<br>
-      偏弱：山东黄金(-1.22%)、比亚迪(-1.04%) 小幅调整<br>
-      注意：北方华创行情获取失败，需手动刷新<br>
-      整体：暂无持仓，仓位=0%，等待建仓机会
-    </div>
+  <h2>💰 美联储动态（4月28-29日 FOMC）</h2>
+  <div class="sector-grid">
+    <div class="sector"><div class="name">利率决议</div><div>维持 3.50%-3.75% 不变</div></div>
+    <div class="sector"><div class="name">市场加息预期</div><div class="neg">CME FedWatch: 52%加息概率</div></div>
+    <div class="sector"><div class="name">高盛预测</div><div class="pos">仍预计降息2次(9月/12月)</div></div>
+    <div class="sector"><div class="name">核心矛盾</div><div>油价暴涨→通胀→美联储两难</div></div>
   </div>
 </div>
 
-<div class="footer">AGIM自选股池 | 数据来源：腾讯证券 | ⚠️ 仅供参考，不构成投资建议</div>
+<div class="section">
+  <h2>📋 A股板块影响分析</h2>
+  <div style="font-size:13px;font-weight:700;margin-bottom:8px">🟢 受益板块</div>
+  <div class="sector-grid">
+    <div class="sector"><div class="name">🛢️ 石油/能源</div><div>霍尔木兹→油价暴涨→三桶油直接受益</div><div class="pos">中国海油 600028 | 中石油 601857</div></div>
+    <div class="sector"><div class="name">🥇 黄金/贵金属</div><div>避险资金涌入→金价高位→黄金股业绩↑</div><div class="pos">山东黄金 600547(持有,目标55元)</div></div>
+    <div class="sector"><div class="name">🛡️ 军工</div><div>地缘风险升温→国防预算→军工订单↑</div><div class="pos">中航沈飞 600760</div></div>
+    <div class="sector"><div class="name">💻 半导体国产替代</div><div>美国芯片管制升级→国产替代加速</div><div class="pos">中芯国际 688981(低吸!)</div></div>
+  </div>
+  <div style="font-size:13px;font-weight:700;margin:10px 0 6px">🔴 回避板块</div>
+  <div class="sector-grid">
+    <div class="sector"><div class="name">✈️ 航空/机场</div><div>油价暴涨→成本大增→利润压缩</div><div class="neg">回避：南航/东航</div></div>
+    <div class="sector"><div class="name">📦 出口制造业</div><div>地缘风险→供应链不确定性↑</div><div class="neg">电子/家电出口承压</div></div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>📊 AGIM 综合评级</h2>
+  <table class="rating-table">
+    <tr><th>维度</th><th>评分</th><th>说明</th></tr>
+    <tr><td>地缘事件</td><td class="high" style="font-size:16px;font-weight:700">95</td><td>霍尔木兹=历史级黑天鹅</td></tr>
+    <tr><td>能源板块</td><td class="high" style="font-size:16px;font-weight:700">88</td><td>直接利好石油/煤炭</td></tr>
+    <tr><td>黄金板块</td><td class="high" style="font-size:16px;font-weight:700">85</td><td>避险+美元走弱</td></tr>
+    <tr><td>军工板块</td><td class="medium" style="font-size:16px;font-weight:700">78</td><td>情绪驱动，业绩待验证</td></tr>
+    <tr><td>半导体</td><td class="medium" style="font-size:16px;font-weight:700">72</td><td>国产替代长逻辑，短线承压</td></tr>
+  </table>
+</div>
+
+<div class="section">
+  <h2>🎯 操作建议</h2>
+  <div style="font-size:13px;line-height:1.8">
+    <div><span class="badge b-green">✅ 持有</span> <b>山东黄金(600547)</b> — 目标价上调至55元，注意止损保护</div>
+    <div style="margin-top:6px"><span class="badge b-green">✅ 低吸</span> <b>中芯国际(688981)</b> — 国产替代逻辑强化，当前~95元，建仓目标118-192</div>
+    <div style="margin-top:6px"><span class="badge b-yellow">⚠️ 观察</span> <b>军工板块</b> — 地缘情绪驱动，勿追高</div>
+    <div style="margin-top:6px"><span class="badge b-red">❌ 回避</span> <b>航空板块</b> — 油价暴涨→成本压力巨大，立即回避</div>
+  </div>
+</div>
+
+<div style="background:#1a0d0d;border-radius:8px;padding:12px;margin-bottom:12px;border:1px solid #3d0d1d">
+  <div style="font-weight:700;color:#ff4d6a;margin-bottom:6px">⚠️ 三大风险情景</div>
+  <div style="font-size:12px;color:#aaa;line-height:1.7">
+    <b>情景A（大概率）：</b>事件局部对峙→油价维持高位→黄金/石油股震荡上行<br>
+    <b>情景B（小概率）：</b>美军直接介入→全球油价突破$100→超级通胀→美联储被迫加息→全球股灾<br>
+    <b>情景C（黑天鹅）：</b>霍尔木兹真封锁→全球20%石油断供→A股大幅低开→内需/军工相对防御
+  </div>
+</div>
+
+<div class="footer">AGIM World News + 实时行情 | ⚠️ 仅供参考，不构成投资建议 | 数据来源：路透社/彭博/Al Jazeera/WSJ + 腾讯证券</div>
 </body>
 </html>

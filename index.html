@@ -3,189 +3,176 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AGIM V2.0 实时扫描 2026-04-07</title>
+<title>自选股实时行情 2026-04-07</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:#0a0e1a;color:#e8eaf0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;padding:24px}
 .header{text-align:center;margin-bottom:24px;padding:20px;background:linear-gradient(135deg,#1a2044,#0d1129);border-radius:16px;border:1px solid #2a3a6a}
 .header h1{font-size:22px;color:#7eb8ff;margin-bottom:6px}
 .header p{color:#6b7fa8;font-size:13px}
-.badge{padding:4px 14px;border-radius:20px;font-size:12px;font-weight:600;display:inline-block}
+.badge{padding:3px 12px;border-radius:20px;font-size:12px;font-weight:600;display:inline-block}
 .b-green{background:#0d3d2d;color:#3dff9a}.b-red{background:#3d0d1d;color:#ff4d6a}
 .b-yellow{background:#3d2d0d;color:#ffc43d}.b-gray{background:#1e2a45;color:#7eb8ff}
-.up{color:#ff4d6a}.dn{color:#3dff9a}.neu{color:#ffc43d}
-.market-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-bottom:20px}
-.mcard{background:#131929;border-radius:12px;padding:14px;text-align:center;border:1px solid #1e2a45}
-.mcard .val{font-size:26px;font-weight:700}
-.mcard .lbl{color:#6b7fa8;font-size:12px;margin-top:4px}
+.up{color:#ff4d6a}.dn{color:#3dff9a}
 .section{background:#131929;border-radius:12px;padding:16px;margin-bottom:14px;border:1px solid #1e2a45}
 .section h2{font-size:14px;color:#7eb8ff;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid #1e2a45}
 .stock-card{background:#0d1129;border-radius:10px;padding:13px;margin-bottom:9px;border-left:3px solid #ffc43d}
-.stock-name{font-size:14px;font-weight:700;margin-bottom:2px}
-.stock-ticker{color:#5a6a8a;font-size:11px;margin-bottom:8px}
 .sg{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:8px}
 .si{background:#0a0e1a;border-radius:5px;padding:6px;text-align:center}
 .si .k{color:#5a6a8a;font-size:10px}.si .v{font-size:13px;font-weight:700;margin-top:1px}
+.sname{font-size:14px;font-weight:700;margin-bottom:2px}
+.notes{font-size:11px;color:#4a5a7a;margin-top:6px;line-height:1.4}
 .verdict{background:#0d1129;border-radius:10px;padding:14px;border:1px solid #2a3a6a;display:flex;align-items:center;gap:14px}
-.vi{font-size:30px}.vt{flex:1}.vtit{font-size:15px;font-weight:700;margin-bottom:4px}
-.vdesc{font-size:12px;color:#6b7fa8}
+.vi{font-size:30px}.vt{flex:1}.vtit{font-size:15px;font-weight:700;margin-bottom:4px}.vdesc{font-size:12px;color:#6b7fa8}
+.footer{text-align:center;color:#3a4a6a;font-size:11px;margin-top:18px}
 table{width:100%;border-collapse:collapse;font-size:13px}
 th{color:#5a6a8a;text-align:left;padding:5px 8px;border-bottom:1px solid #1e2a45;font-weight:400}
 td{padding:6px 8px;border-bottom:1px solid #131929}
 .up-td{color:#ff4d6a}.dn-td{color:#3dff9a}
-.footer{text-align:center;color:#3a4a6a;font-size:11px;margin-top:18px}
 </style>
 </head>
 <body>
 
 <div class="header">
-  <h1>📊 AGIM V2.0 实时扫描</h1>
-  <p>🕐 2026-04-07 11:03 UTC &nbsp;|&nbsp; 数据：腾讯证券实时行情</p>
-  <div style="margin-top:12px">
-    <span class="badge b-green">▲ 涨停 93家</span>
-    <span class="badge b-red">▼ 跌停 0家</span>
-    <span class="badge b-gray">北向 暂缺</span>
-  </div>
-</div>
-
-<div class="market-grid">
-  <div class="mcard"><div class="val up">▲1.37%</div><div class="lbl">贵州茅台 1440.02</div></div>
-  <div class="mcard"><div class="val up">▲0.37%</div><div class="lbl">五粮液 103.11</div></div>
-  <div class="mcard"><div class="val up">▲0.48%</div><div class="lbl">宁德时代 384.59</div></div>
-  <div class="mcard"><div class="val dn">▼1.76%</div><div class="lbl">海光信息 217.54</div></div>
-  <div class="mcard"><div class="val up">▲0.84%</div><div class="lbl">立讯精密 48.39</div></div>
+  <h1>📊 自选股实时行情</h1>
+  <p>🕐 2026-04-07 11:27 UTC &nbsp;|&nbsp; 数据：腾讯证券实时行情</p>
 </div>
 
 <div class="section">
-  <h2>📈 实时行情一览</h2>
+  <h2>📈 自选股报价（2026-04-07）</h2>
   <table>
-    <tr><th>代码</th><th>名称</th><th>最新价</th><th>今高</th><th>今低</th><th>涨跌幅</th></tr>
+    <tr><th>股票</th><th>代码</th><th>最新价</th><th>昨收</th><th>涨跌幅</th><th>信号</th></tr>
+
     <tr>
-      <td>sh600519</td><td>贵州茅台</td><td>1440.02</td><td>1470.00</td><td>1435.05</td><td class="up-td">▲1.37%</td>
+      <td><b>万华化学</b></td><td>600309</td>
+      <td class="up">86.27</td><td>82.38</td>
+      <td class="up">▲4.72%</td>
+      <td><span class="badge b-green">强势</span></td>
     </tr>
+
     <tr>
-      <td>sz000858</td><td>五粮液</td><td>103.11</td><td>103.90</td><td>102.35</td><td class="up-td">▲0.37%</td>
+      <td><b>中芯国际</b></td><td>688981</td>
+      <td class="up">95.62</td><td>91.78</td>
+      <td class="up">▲4.18%</td>
+      <td><span class="badge b-green">强势</span></td>
     </tr>
+
     <tr>
-      <td>sz300750</td><td>宁德时代</td><td>384.59</td><td>393.20</td><td>381.49</td><td class="up-td">▲0.48%</td>
+      <td><b>比亚迪</b></td><td>002594</td>
+      <td class="dn">97.98</td><td>99.01</td>
+      <td class="dn">▼1.04%</td>
+      <td><span class="badge b-red">偏弱</span></td>
     </tr>
+
     <tr>
-      <td>sh688041</td><td>寒武纪</td><td>217.54</td><td>223.85</td><td>211.00</td><td class="dn-td">▼1.76%</td>
+      <td><b>宁德时代</b></td><td>300750</td>
+      <td class="dn">384.59</td><td>386.46</td>
+      <td class="dn">▼0.48%</td>
+      <td><span class="badge b-yellow">中性</span></td>
     </tr>
+
     <tr>
-      <td>sz002475</td><td>立讯精密</td><td>48.39</td><td>49.95</td><td>48.11</td><td class="up-td">▲0.84%</td>
+      <td><b>山东黄金</b></td><td>600547</td>
+      <td class="dn">39.70</td><td>40.19</td>
+      <td class="dn">▼1.22%</td>
+      <td><span class="badge b-red">偏弱</span></td>
     </tr>
+
+    <tr>
+      <td><b>禾赛科技</b></td><td>HSAI.US</td>
+      <td>20.71</td><td>20.63</td>
+      <td class="up">▲0.39%</td>
+      <td><span class="badge b-yellow">美股</span></td>
+    </tr>
+
   </table>
+  <p style="color:#3a4a6a;font-size:11px;margin-top:8px">⚠️ 北方华创(002371) 行情获取失败，请稍后刷新</p>
 </div>
 
 <div class="section">
-  <h2>📡 AGIM个股交易信号</h2>
+  <h2>📋 持仓快照与AGIM评分</h2>
 
   <div class="stock-card">
-    <div class="stock-name">贵州茅台 <span class="badge b-red" style="font-size:10px">▼1.37%</span></div>
-    <div class="stock-ticker">sh600519</div>
+    <div class="sname">万华化学 <span class="badge b-green" style="font-size:10px">▲4.72%</span></div>
     <div class="sg">
-      <div class="si"><div class="k">信号</div><div class="v" style="color:#ffc43d">观望</div></div>
-      <div class="si"><div class="k">置信度</div><div class="v">55%</div></div>
-      <div class="si"><div class="k">止损价</div><div class="v" style="color:#ff4d6a">1368.02</div></div>
-      <div class="si"><div class="k">止盈价</div><div class="v" style="color:#3dff9a">1656.02</div></div>
+      <div class="si"><div class="k">AGIM评分</div><div class="v">75</div></div>
+      <div class="si"><div class="k">持仓成本</div><div class="v">-</div></div>
+      <div class="si"><div class="k">持仓状态</div><div class="v">观望</div></div>
+      <div class="si"><div class="k">来源</div><div class="v">AGIM</div></div>
     </div>
-    <div class="sg">
-      <div class="si"><div class="k">基本面</div><div class="v">80</div></div>
-      <div class="si"><div class="k">技术面</div><div class="v">65</div></div>
-      <div class="si"><div class="k">情绪面</div><div class="v">76</div></div>
-      <div class="si"><div class="k">事件面</div><div class="v">72</div></div>
-    </div>
+    <div class="notes">化工龙头，MDI景气度 | 今日大幅上涨4.72%，突破近期整理区间，关注量能配合</div>
   </div>
 
   <div class="stock-card">
-    <div class="stock-name">宁德时代 <span class="badge b-green" style="font-size:10px">▲0.48%</span></div>
-    <div class="stock-ticker">sz300750</div>
+    <div class="sname">中芯国际 <span class="badge b-green" style="font-size:10px">▲4.18%</span></div>
     <div class="sg">
-      <div class="si"><div class="k">信号</div><div class="v" style="color:#ffc43d">观望</div></div>
-      <div class="si"><div class="k">置信度</div><div class="v">54%</div></div>
-      <div class="si"><div class="k">止损价</div><div class="v" style="color:#ff4d6a">361.51</div></div>
-      <div class="si"><div class="k">止盈价</div><div class="v" style="color:#3dff9a">453.82</div></div>
+      <div class="si"><div class="k">AGIM评分</div><div class="v">82</div></div>
+      <div class="si"><div class="k">持仓成本</div><div class="v">~97元</div></div>
+      <div class="si"><div class="k">目标价</div><div class="v">118-192元</div></div>
+      <div class="si"><div class="k">来源</div><div class="v">AGIM</div></div>
     </div>
-    <div class="sg">
-      <div class="si"><div class="k">基本面</div><div class="v">80</div></div>
-      <div class="si"><div class="k">技术面</div><div class="v">75</div></div>
-      <div class="si"><div class="k">情绪面</div><div class="v">81</div></div>
-      <div class="si"><div class="k">事件面</div><div class="v">72</div></div>
-    </div>
+    <div class="notes">半导体国产替代+科创板一季报催化 | 今日大涨4.18%，当前95.62元，低于建仓成本，可逢低加仓</div>
   </div>
 
   <div class="stock-card">
-    <div class="stock-name">五粮液 <span class="badge b-green" style="font-size:10px">▲0.37%</span></div>
-    <div class="stock-ticker">sz000858</div>
+    <div class="sname">比亚迪 <span class="badge b-red" style="font-size:10px">▼1.04%</span></div>
     <div class="sg">
-      <div class="si"><div class="k">信号</div><div class="v" style="color:#ffc43d">观望</div></div>
-      <div class="si"><div class="k">置信度</div><div class="v">46%</div></div>
-      <div class="si"><div class="k">止损价</div><div class="v" style="color:#ff4d6a">97.95</div></div>
-      <div class="si"><div class="k">止盈价</div><div class="v" style="color:#3dff9a">121.67</div></div>
+      <div class="si"><div class="k">AGIM评分</div><div class="v">79</div></div>
+      <div class="si"><div class="k">建仓区间</div><div class="v">450元</div></div>
+      <div class="si"><div class="k">事件</div><div class="v">北京车展</div></div>
+      <div class="si"><div class="k">来源</div><div class="v">AGIM</div></div>
     </div>
-    <div class="sg">
-      <div class="si"><div class="k">基本面</div><div class="v">80</div></div>
-      <div class="si"><div class="k">技术面</div><div class="v">65</div></div>
-      <div class="si"><div class="k">情绪面</div><div class="v">71</div></div>
-      <div class="si"><div class="k">事件面</div><div class="v">72</div></div>
-    </div>
+    <div class="notes">北京车展(4/6) 事件已兑现 | 今日小幅回落1.04%，距建仓目标价较远，轻仓等待</div>
   </div>
 
   <div class="stock-card">
-    <div class="stock-name">寒武纪 <span class="badge b-red" style="font-size:10px">▼1.76%</span></div>
-    <div class="stock-ticker">sh688041</div>
+    <div class="sname">宁德时代 <span class="badge b-yellow" style="font-size:10px">▼0.48%</span></div>
     <div class="sg">
-      <div class="si"><div class="k">信号</div><div class="v" style="color:#ffc43d">观望</div></div>
-      <div class="si"><div class="k">置信度</div><div class="v">47%</div></div>
-      <div class="si"><div class="k">止损价</div><div class="v" style="color:#ff4d6a">206.66</div></div>
-      <div class="si"><div class="k">止盈价</div><div class="v" style="color:#3dff9a">256.70</div></div>
+      <div class="si"><div class="k">AGIM评分</div><div class="v">77</div></div>
+      <div class="si"><div class="k">建仓区间</div><div class="v">265元</div></div>
+      <div class="si"><div class="k">事件</div><div class="v">北京车展</div></div>
+      <div class="si"><div class="k">来源</div><div class="v">AGIM</div></div>
     </div>
-    <div class="sg">
-      <div class="si"><div class="k">基本面</div><div class="v">80</div></div>
-      <div class="si"><div class="k">技术面</div><div class="v">65</div></div>
-      <div class="si"><div class="k">情绪面</div><div class="v">65</div></div>
-      <div class="si"><div class="k">事件面</div><div class="v">72</div></div>
-    </div>
+    <div class="notes">全球动力电池龙头 | 北京车展事件已过，股价正常调整，轻仓观望</div>
   </div>
 
   <div class="stock-card">
-    <div class="stock-name">立讯精密 <span class="badge b-green" style="font-size:10px">▲0.84%</span></div>
-    <div class="stock-ticker">sz002475</div>
+    <div class="sname">山东黄金 <span class="badge b-red" style="font-size:10px">▼1.22%</span></div>
     <div class="sg">
-      <div class="si"><div class="k">信号</div><div class="v" style="color:#ffc43d">观望</div></div>
-      <div class="si"><div class="k">置信度</div><div class="v">40%</div></div>
-      <div class="si"><div class="k">止损价</div><div class="v" style="color:#ff4d6a">45.91</div></div>
-      <div class="si"><div class="k">止盈价</div><div class="v" style="color:#3dff9a">57.10</div></div>
+      <div class="si"><div class="k">AGIM评分</div><div class="v">76</div></div>
+      <div class="si"><div class="k">持仓成本</div><div class="v">44元</div></div>
+      <div class="si"><div class="k">目标价</div><div class="v">52元</div></div>
+      <div class="si"><div class="k">来源</div><div class="v">AGIM</div></div>
     </div>
-    <div class="sg">
-      <div class="si"><div class="k">基本面</div><div class="v">80</div></div>
-      <div class="si"><div class="k">技术面</div><div class="v">65</div></div>
-      <div class="si"><div class="k">情绪面</div><div class="v">72</div></div>
-      <div class="si"><div class="k">事件面</div><div class="v">72</div></div>
-    </div>
+    <div class="notes">黄金价格创历史新高 | 兑现期，股价小幅回落至39.70元，注意止损保护（7%止损线）</div>
   </div>
-</div>
 
-<div class="section">
-  <h2>🔥 涨停池 TOP10（今日）</h2>
-  <table>
-    <tr><th>#</th><th>代码</th><th>名称</th><th>连板</th><th>换手率</th><th>封板资金</th><th>行业</th></tr>
-    <tr><td>1</td><td>000586</td><td>汇源通信</td><td>3板</td><td>0.94%</td><td>3.54亿</td><td>通信设备</td></tr>
-    <tr><td>2</td><td>603327</td><td>福蓉科技</td><td>1板</td><td>0.57%</td><td>0.91亿</td><td>消费电子</td></tr>
-    <tr><td>3</td><td>000890</td><td>法尔胜</td><td>1板</td><td>11.26%</td><td>1.70亿</td><td>环保设备</td></tr>
-  </table>
-  <p style="color:#5a6a8a;font-size:12px;margin-top:8px">共 93 只涨停 | 数据来源: akshare东方财富</p>
+  <div class="stock-card">
+    <div class="sname">禾赛科技 <span class="badge b-yellow" style="font-size:10px">▲0.39%</span></div>
+    <div class="sg">
+      <div class="si"><div class="k">AGIM评分</div><div class="v">76</div></div>
+      <div class="si"><div class="k">最新价</div><div class="v">$20.71</div></div>
+      <div class="si"><div class="k">ADR</div><div class="v">美股</div></div>
+      <div class="si"><div class="k">来源</div><div class="v">AGIM</div></div>
+    </div>
+    <div class="notes">L3自动驾驶元年+激光雷达龙头 | 全球车载激光雷达市占率~40%，L3政策直接受益 | 美股开盘中</div>
+  </div>
+
 </div>
 
 <div class="verdict">
-  <div class="vi">⏸️</div>
+  <div class="vi">📋</div>
   <div class="vt">
-    <div class="vtit">CDO首席决策官：整体建议观望</div>
-    <div class="vdesc">茅台-1.37%带消费下跌，宁德时代小涨属正常波动 | 涨停93家显示局部做多情绪 | 注意保护止损，仓位控制在40%以下 | 等待更明确的方向信号</div>
+    <div class="vtit">自选股今日小结</div>
+    <div class="vdesc">
+      强势：万华化学(+4.72%)、中芯国际(+4.18%) 领涨<br>
+      偏弱：山东黄金(-1.22%)、比亚迪(-1.04%) 小幅调整<br>
+      注意：北方华创行情获取失败，需手动刷新<br>
+      整体：暂无持仓，仓位=0%，等待建仓机会
+    </div>
   </div>
 </div>
 
-<div class="footer">AGIM V2.0 | ⚠️ 仅供参考，不构成投资建议 | 数据来源：腾讯证券+东方财富</div>
+<div class="footer">AGIM自选股池 | 数据来源：腾讯证券 | ⚠️ 仅供参考，不构成投资建议</div>
 </body>
 </html>
